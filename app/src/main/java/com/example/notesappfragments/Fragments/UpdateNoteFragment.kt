@@ -1,4 +1,4 @@
-package com.example.notesappfragments
+package com.example.notesappfragments.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.notesappfragments.Models.MainViewModel
+import com.example.notesappfragments.Models.Note
 import com.example.notesappfragments.databinding.FragmentUpdateNoteBinding
-import java.util.zip.Inflater
 
 class UpdateNoteFragment : Fragment() {
     lateinit var binding: FragmentUpdateNoteBinding
@@ -38,6 +39,6 @@ class UpdateNoteFragment : Fragment() {
 
     companion object {
 
-        lateinit var noteOb:Note
+        lateinit var noteOb: Note
     }
 }

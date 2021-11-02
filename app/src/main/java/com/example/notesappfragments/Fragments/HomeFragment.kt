@@ -1,4 +1,4 @@
-package com.example.notesappfragments
+package com.example.notesappfragments.Fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.notesappfragments.Models.MainViewModel
+import com.example.notesappfragments.Adapter.RVAdapter
 import com.example.notesappfragments.databinding.FragmentHomeBinding
 
 
@@ -21,7 +23,7 @@ class HomeFragment : Fragment() {
     ): View? {
         binding= FragmentHomeBinding.inflate(inflater,container,false)
         mainViewModel.getNotes().observe(this,{
-            binding.recyclerView.adapter=RVAdapter(this,it)
+            binding.recyclerView.adapter= RVAdapter(this,it)
             binding.recyclerView.layoutManager=LinearLayoutManager(requireContext())
             binding.recyclerView.adapter?.notifyDataSetChanged()
 

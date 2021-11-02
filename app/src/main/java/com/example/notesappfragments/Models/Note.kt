@@ -1,4 +1,4 @@
-package com.example.notesappfragments
+package com.example.notesappfragments.Models
 
 
 data class Note(

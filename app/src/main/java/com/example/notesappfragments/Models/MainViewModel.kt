@@ -1,4 +1,4 @@
-package com.example.notesappfragments
+package com.example.notesappfragments.Models
 
 import android.app.Application
 import android.widget.Toast
@@ -50,7 +50,7 @@ class MainViewModel(application: Application):AndroidViewModel(application) {
         }
 
     }
-    fun updateNote(noteOb:Note, noteUpdate:String){
+    fun updateNote(noteOb: Note, noteUpdate:String){
                     db.collection("Notes").document(noteOb.id).update("note", noteUpdate)
                     getNotes()
             Toast.makeText(app, "note is updated", Toast.LENGTH_SHORT).show()
